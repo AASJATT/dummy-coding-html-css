@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Component Library</title>
+    <link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
   <h1>AASTHA's COMPONENT LIBRARY</h1>
@@ -15,37 +16,40 @@
   <h1>This is the biggest heading h1</h1>
   <h2>The second biggest heading h2</h2>
   <p>This is normal text, free flow, wrap at the end like a paragraph</p>
+  <p>This paragraph will have <strong>bold</strong> text</p>
   <small>This is relatively smaller text</small>
   <hr>
 
   <h2>@containers</h2>
   <h3>@fluid container</h3>
-  <div>This is a fluid container. It will go full width of page with some margin.</div>
+  <div class="container">This is a fluid container. It will go full width of page with some margin.</div>
   <h3>@center container</h3>
-  <div> This is a center container. It will go till the given width and center content.</div>
+  <div class="container container-center"> This is a center container. It will go till the given width and center content.</div>
   <hr>
 
   <h2>@links</h2>
-  <a href="/">Primary Link</a>
-  <a href="/">Secondary Link</a>
+  <a class="link link-primary" href="/">Primary Link</a>
+  <a class="link link-secondary" href="/">Secondary Link</a>
   <hr>
 
   <h2>@lists</h2>
   <h3>@unordered list</h3>
-  <ul>
+  <p>This list will not have bullet</p>
+  <ul class="list-non-bullet">
     <li>listone</li>
     <li>listtwo</li>
     <li>listthree</li>
   </ul>
+
   <h3>@unordered inline list</h3>
   <ul>
-    <li>inlinelistone</li>
-    <li>inlinelisttwo</li>
-    <li>inlinelistthree</li>
+    <li class="list-item-inline">inlinelistone</li>
+    <li class="list-item-inline">inlinelisttwo</li>
+    <li class="list-item-inline">inlinelistthree</li>
   </ul>
 
   <h3> reverse ordered list</h3>
-  <ol>
+  <ol reversed>
     <li>list one</li>
     <li>list two</li>
     <li>list three</li>
@@ -53,48 +57,62 @@
   <hr>
 
   <h2>@nav</h2>
-  <div>iAMBRAND</div>
-  <ul>
-    <li>
-        <a href="/">home</a>
+  <nav class="navigation container">
+  <div class="nav-brand">iAMBRAND</div>
+  <ul class="list-non-bullet nav-pills">
+    <li class="list-item-inline">
+        <a class="link link-active" href="/">home</a>
     </li>
-    <li>
-        <a href="/">products</a>
+    <li class="list-item-inline">
+        <a class="link" href="/">products</a>
     </li>
-    <li>
-        <a href="/">about</a>
+    <li class="list-item-inline">
+        <a class="link" href="/">about</a>
     </li>
 
   </ul>
+  </nav>
   <hr>
 
   <h2>@header</h2>
-  <header>
-    <img src="images/hero.svg"/>
-    <h1>heading inside header</h1>
+  <header class="hero">
+    <img class="hero-img" src="images/hero.svg"/>
+    <h1 class="hero-heading">heading inside <span style="color:var(--primary-color)"> header</span></h1>
     
   </header>
-  <hr>
+  <hr> 
 
   <h2>@section</h2>
-  <section>
-    <h3>White section</h3>
+  <section class="section">
+    <div class="container container-center">
+    <h1>White section</h1>
     <p>This will have white background</p>
+    </div>
   </section>
 
-  <section>
-    <h2>off-white section</h2>
+  <section class="section ow">
+    <div class="container container-center">
+    <h1>off-white section</h1>
     <p>This will have gray background</p>
+  </div>
   </section>
   <hr>
 
   <h2>@footer</h2>
-  <footer>
-    <div>small heading inside footer</div>
-    <ul>
-        <li>listone</li>
-        <li>listtwo</li>
-        <li>listthree</li>
+  <footer class="footer">
+    <div class="footer-header">small heading inside footer</div>
+    <ul class="list-non-bullet social-links">
+        <li class="list-item-inline">
+          <a class="link" href="/">list one</a>
+        </li>
+        <li class="list-item-inline">
+          <a class="link" href="/">list two</a>
+        </li>
+        
+        <li class="list-item-inline">
+          <a class="link" href="/">list three</a> 
+          
+        </li>
     </ul>
     
 
